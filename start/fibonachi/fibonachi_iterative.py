@@ -1,7 +1,9 @@
 import time
 
 def fib_iterative(n: int) -> int:
-    if n == 1 or n == 2:
+    if n < 1:
+        raise ValueError("n должно быть больше или равном единице")
+    elif n in (1, 2):
         return 1
     
     n1 = 1
